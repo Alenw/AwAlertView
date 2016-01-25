@@ -18,10 +18,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)b1:(id)sender {
 }
 
+- (IBAction)b2:(id)sender {
+}
+
+- (IBAction)b3:(id)sender {
+}
+
+- (IBAction)b4:(id)sender {
+}
+
+- (IBAction)b5:(id)sender {
+}
+
+- (IBAction)b6:(id)sender {
+}
+
+- (IBAction)b7:(id)sender {
+}
+
+- (IBAction)b8:(id)sender {
+}
 @end
