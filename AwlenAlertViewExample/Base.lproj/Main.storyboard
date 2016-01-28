@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6d-kF-p8H">
-                                <rect key="frame" x="20" y="127" width="152" height="30"/>
+                                <rect key="frame" x="20" y="72" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B1"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1S-Co-2ri">
-                                <rect key="frame" x="20" y="172" width="152" height="30"/>
+                                <rect key="frame" x="20" y="117" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B2"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMK-li-kJ2">
-                                <rect key="frame" x="20" y="216" width="152" height="30"/>
+                                <rect key="frame" x="20" y="161" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B3"/>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-nv-aQw">
-                                <rect key="frame" x="20" y="261" width="152" height="30"/>
+                                <rect key="frame" x="20" y="206" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B4"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD0-Zh-DJk">
-                                <rect key="frame" x="20" y="306" width="152" height="30"/>
+                                <rect key="frame" x="20" y="251" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B5"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9D-Dc-cFJ">
-                                <rect key="frame" x="20" y="351" width="152" height="30"/>
+                                <rect key="frame" x="20" y="296" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B6"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-M7-wq1">
-                                <rect key="frame" x="20" y="398" width="152" height="30"/>
+                                <rect key="frame" x="20" y="343" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B7"/>
@@ -80,12 +80,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-pa-b7W">
-                                <rect key="frame" x="20" y="443" width="152" height="30"/>
+                                <rect key="frame" x="20" y="388" width="152" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B8"/>
                                 <connections>
                                     <action selector="b8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFe-JC-bx5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppo-6M-HaR">
+                                <rect key="frame" x="20" y="433" width="152" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="B9"/>
+                                <connections>
+                                    <action selector="b9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtW-I9-Hd5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8V-KN-als">
+                                <rect key="frame" x="20" y="476" width="152" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="B10"/>
+                                <connections>
+                                    <action selector="b10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cH4-Cg-N2W"/>
                                 </connections>
                             </button>
                         </subviews>
