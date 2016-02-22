@@ -7,5 +7,10 @@ https://github.com/Alenw/AwAlertView。
 ##### AwAlertView 将来会扩展显示位置接口，比如传入坐标点，按坐标点显示，现在默认的显示位置是View的中心点。功能如下图演示GIF，如何使用请下载查看example Demo! <br><br>
 
 ![](https://github.com/Alenw/AwAlertView/blob/master/wt2.gif)
+<br><br>
+![](https://github.com/Alenw/AwAlertView/blob/master/share.png)
 
+###Contact
+Alen Wang
+lanskyxti@163.com
 
