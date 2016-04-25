@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="acY-kP-YYH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="acY-kP-YYH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--AwlenAlertViewExample-->
@@ -18,7 +18,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6d-kF-p8H">
                                 <rect key="frame" x="20" y="72" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B1"/>
                                 <connections>
@@ -27,7 +26,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1S-Co-2ri">
                                 <rect key="frame" x="20" y="117" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B2"/>
                                 <connections>
@@ -36,7 +34,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMK-li-kJ2">
                                 <rect key="frame" x="20" y="161" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B3"/>
                                 <connections>
@@ -45,7 +42,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-nv-aQw">
                                 <rect key="frame" x="20" y="206" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B4"/>
                                 <connections>
@@ -54,7 +50,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD0-Zh-DJk">
                                 <rect key="frame" x="20" y="251" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B5"/>
                                 <connections>
@@ -63,7 +58,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9D-Dc-cFJ">
                                 <rect key="frame" x="20" y="296" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B6"/>
                                 <connections>
@@ -72,7 +66,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-M7-wq1">
                                 <rect key="frame" x="20" y="343" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B7"/>
                                 <connections>
@@ -81,7 +74,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-pa-b7W">
                                 <rect key="frame" x="20" y="388" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B8"/>
                                 <connections>
@@ -90,7 +82,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppo-6M-HaR">
                                 <rect key="frame" x="20" y="433" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B9"/>
                                 <connections>
@@ -99,15 +90,29 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8V-KN-als">
                                 <rect key="frame" x="20" y="476" width="152" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B10"/>
                                 <connections>
                                     <action selector="b10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cH4-Cg-N2W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nr-PD-riB">
+                                <rect key="frame" x="20" y="514" width="152" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="B11"/>
+                                <connections>
+                                    <action selector="b11:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ept-fi-dCt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10q-0p-t2M">
+                                <rect key="frame" x="20" y="557" width="152" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="B12"/>
+                                <connections>
+                                    <action selector="b12:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4P3-GV-1bl"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="AwlenAlertViewExample" id="5l6-0x-Ord"/>
@@ -124,7 +129,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fX4-qn-Fhq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

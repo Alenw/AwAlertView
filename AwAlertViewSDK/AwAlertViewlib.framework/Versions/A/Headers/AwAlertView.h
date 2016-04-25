@@ -18,9 +18,12 @@ typedef enum {
 @class AwAlertView;
 @protocol AwAlertViewDelegate <NSObject>
 @optional
-- (void)alertView:(AwAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex; // before animation and hiding view
-- (void)alertView:(AwAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+/** 按钮点击事件带领方法 */
+// before animation and hiding view
+- (void)awAlertView:(AwAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex;
 
+- (void)awAlertView:(AwAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+/** 暂未开放 */
 - (void)didRotationToInterfaceOrientation:(BOOL)Landscape view:(UIView*)view alertView:(AwAlertView *)aletView;
 
 @end
@@ -146,12 +149,50 @@ typedef enum {
  */
 -(instancetype)initWithStyle:(AwAlertViewStyle)awStyle title:(NSString *)title message:(NSString *)message delegate:(id)delegate customView:(UIView *)customview cancelTitle:(NSString *)cancelText otherTitle:(NSString *)otherText;
 
-
+#pragma mark - 不同需求的Show方法
+/**
+ *  AlertView 展示方法
+ */
 -(void)show;
-/***************************************************************************/
+/**
+ *  指定即将展示的View的Y值,view显示位置居中
+ *
+ *  @param positionY 相对父视图坐标系的Y
+ */
+-(void)showWithY:(CGFloat)positionY;
 
+/**
+ *  指定在某个位置展示
+ *
+ *  @param position origin,frame坐标系中左顶点坐标
+ */
+-(void)showInPoint:(CGPoint)position;
+
+/**
+ *  指定在某个区域显示,Note:如果是自定义View，只支持约束和在layoutSubViews重写的布局，
+ *  如果这个方面不是太懂的尽量不用这个方法
+ *  @param rect 相对父视图坐标系的frame
+ */
+-(void)showInRect:(CGRect)rect;
+/***************************************************************************/
+/*!
+ @property      dimBackground
+ @abstract      是否显示背景渐变色,默认显示
+ */
+@property (nonatomic, assign) BOOL hideDimBackground;
 /** 是否启用背景事件，默认不启用 */
 @property (nonatomic, assign) BOOL isUseHidden;
 
+/** 是否需要放弃键盘响应,这个属性与isUserHidden一起使用 */
+@property (nonatomic, assign) BOOL needGiveupTouch;
+
 - (instancetype)initWithContentView:(UIView *)contentView;
+/**
+ *  动态更新自定义View的Y值
+ *
+ *  @param positionY 动态调整自定义View的Y值
+ *  @param duration  持续时间,动画时间,键盘弹起的时间是0.25秒
+ */
+- (void)awAlertViewAnimationWithPositionYValues:(CGFloat)positionY andDuration:(NSTimeInterval)duration;
+
 @end
