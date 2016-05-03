@@ -15,6 +15,12 @@ typedef enum {
     AwAlertViewStyle3
 }AwAlertViewStyle;
 
+typedef enum {
+    AwAlertViewAniDefaul=0,
+    AwAlertViewAniStyle1,
+    AwAlertViewAniStyle2
+}AwAlertViewAnimationStyle;
+
 @class AwAlertView;
 @protocol AwAlertViewDelegate <NSObject>
 @optional
@@ -155,11 +161,19 @@ typedef enum {
  */
 -(void)show;
 /**
- *  指定即将展示的View的Y值,view显示位置居中
+ *  指定即将展示的View在父视图中的Y值,view显示位置居中
  *
- *  @param positionY 相对父视图坐标系的Y
+ *  @param positionY 距离顶部的Y
+ *  @param flag      标记是否动画
  */
--(void)showWithY:(CGFloat)positionY;
+-(void)showWithY:(CGFloat)positionY withAnimationFlag:(BOOL)flag;
+/**
+ *  指定即将展示的View的距离底部的偏移值,view显示位置居中,标记是否选择动画
+ *
+ *  @param offset 距离底部的偏移量
+ *  @param flag   标记是否动画
+ */
+-(void)showWithBottomYOffset:(CGFloat)offset withAnimationFlag:(BOOL)flag;
 
 /**
  *  指定在某个位置展示
@@ -182,6 +196,8 @@ typedef enum {
 @property (nonatomic, assign) BOOL hideDimBackground;
 /** 是否启用背景事件，默认不启用 */
 @property (nonatomic, assign) BOOL isUseHidden;
+/** 提供多个动画效果，默认AwAlertViewAniDefault */
+@property (nonatomic, assign) AwAlertViewStyle animationStyle;
 
 /** 是否需要放弃键盘响应,这个属性与isUserHidden一起使用 */
 @property (nonatomic, assign) BOOL needGiveupTouch;

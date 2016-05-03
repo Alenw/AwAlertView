@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <AwAlertViewlib/AwAlertViewlib.h>
+#import <AwAlertViewlib/AwAlertView.h>
 
 @interface ViewController ()<UITextFieldDelegate>
 @property (nonatomic, weak) AwAlertView *alertView;
@@ -174,6 +174,17 @@
 //    [alert showWithY:200];
 //    //show在指定的rect
 //    [alert showInRect:CGRectMake(50, 50, 200, 200)];
+}
+//第5种show方式
+- (IBAction)b13:(id)sender {
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(50, 50, 200, 200)];
+    view.backgroundColor=[UIColor orangeColor];
+    
+    AwAlertView *alert=[[AwAlertView alloc]initWithContentView:view];
+    
+    alert.isUseHidden=YES;
+    [alert showWithY:80 withAnimationFlag:YES];
+//    [alert showWithBottomYOffset:80 withAnimationFlag:YES];
 }
 
 -(void)alertView:(AwAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{

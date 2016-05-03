@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60B4B7041CCDEDCE00D8A8D2 /* AwAlertViewlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60B4B7021CCDEDCE00D8A8D2 /* AwAlertViewlib.bundle */; };
-		60B4B7051CCDEDCE00D8A8D2 /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B4B7031CCDEDCE00D8A8D2 /* AwAlertViewlib.framework */; };
+		6036001F1CD8F26700EA6DD5 /* AwAlertViewlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6036001D1CD8F26700EA6DD5 /* AwAlertViewlib.bundle */; };
+		603600201CD8F26700EA6DD5 /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6036001E1CD8F26700EA6DD5 /* AwAlertViewlib.framework */; };
 		6EE82D311C55CBBD005EA2CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D301C55CBBD005EA2CA /* main.m */; };
 		6EE82D341C55CBBD005EA2CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D331C55CBBD005EA2CA /* AppDelegate.m */; };
 		6EE82D371C55CBBD005EA2CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D361C55CBBD005EA2CA /* ViewController.m */; };
@@ -37,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		60B4B7021CCDEDCE00D8A8D2 /* AwAlertViewlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AwAlertViewlib.bundle; sourceTree = "<group>"; };
-		60B4B7031CCDEDCE00D8A8D2 /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
+		6036001D1CD8F26700EA6DD5 /* AwAlertViewlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AwAlertViewlib.bundle; sourceTree = "<group>"; };
+		6036001E1CD8F26700EA6DD5 /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
 		6EE82D2C1C55CBBD005EA2CA /* AwlenAlertViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwlenAlertViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE82D301C55CBBD005EA2CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EE82D321C55CBBD005EA2CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60B4B7051CCDEDCE00D8A8D2 /* AwAlertViewlib.framework in Frameworks */,
+				603600201CD8F26700EA6DD5 /* AwAlertViewlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +106,8 @@
 		6EE82D2E1C55CBBD005EA2CA /* AwlenAlertViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				60B4B7021CCDEDCE00D8A8D2 /* AwAlertViewlib.bundle */,
-				60B4B7031CCDEDCE00D8A8D2 /* AwAlertViewlib.framework */,
+				6036001D1CD8F26700EA6DD5 /* AwAlertViewlib.bundle */,
+				6036001E1CD8F26700EA6DD5 /* AwAlertViewlib.framework */,
 				6EE82D321C55CBBD005EA2CA /* AppDelegate.h */,
 				6EE82D331C55CBBD005EA2CA /* AppDelegate.m */,
 				6EE82D351C55CBBD005EA2CA /* ViewController.h */,
@@ -253,7 +253,7 @@
 				6EE82D3F1C55CBBD005EA2CA /* LaunchScreen.storyboard in Resources */,
 				6EE82D3C1C55CBBD005EA2CA /* Assets.xcassets in Resources */,
 				6EE82D3A1C55CBBD005EA2CA /* Main.storyboard in Resources */,
-				60B4B7041CCDEDCE00D8A8D2 /* AwAlertViewlib.bundle in Resources */,
+				6036001F1CD8F26700EA6DD5 /* AwAlertViewlib.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
