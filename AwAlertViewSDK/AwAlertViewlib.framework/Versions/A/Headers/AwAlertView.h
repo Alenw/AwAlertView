@@ -157,6 +157,10 @@ typedef enum {
 
 #pragma mark - 不同需求的Show方法
 /**
+ *  清除当前显示的AwAlertView
+ */
+- (void)dismiss;
+/**
  *  AlertView 展示方法
  */
 -(void)show;
