@@ -12,7 +12,7 @@ https://github.com/Alenw/AwAlertView。
 
 <br/>
 
-####新增加方法，用于解决弹出TextField键盘遮挡问题
+#####新增加方法，用于解决弹出TextField键盘遮挡问题
 
        /**
         *  动态更新自定义View的Y值
@@ -24,10 +24,10 @@ https://github.com/Alenw/AwAlertView。
 
 <br/>
 
-####新增两个属性
+#####新增两个属性
        /** 是否需要放弃键盘响应,这个属性与isUserHidden一起使用 */
         @property (nonatomic, assign) BOOL needGiveupTouch;
-<br/>
+
         /*!
          *   @property      dimBackground
  	 *   @abstract      是否显示背景渐变色,默认显示
@@ -35,13 +35,12 @@ https://github.com/Alenw/AwAlertView。
 	 @property (nonatomic, assign) BOOL hideDimBackground;
 <br/>
 
-#pragma mark - 不同需求的Show方法
+#####pragma mark - 不同需求的Show方法
          /**
 	  *  AlertView 展示方法
 	  */
 	 -(void)show;
 
-<br/>
 	 /**
  	  *  指定即将展示的View的Y值,view显示位置居中
 	  *
@@ -49,14 +48,13 @@ https://github.com/Alenw/AwAlertView。
  	  */
 	 -(void)showWithY:(CGFloat)positionY;
 
-<br/>
 	 /**
  	  *  指定在某个位置展示
  	  *
  	  *  @param position origin,frame坐标系中左顶点坐标
  	  */
 	 -(void)showInPoint:(CGPoint)position;
-<br/>
+
 	 /**
 	  *  指定在某个区域显示,Note:如果是自定义View，只支持约束和在layoutSubViews重写的布局，
 	  *  如果这个方面不是太懂的尽量不用这个方法
