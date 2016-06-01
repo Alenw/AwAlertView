@@ -77,11 +77,6 @@
 }
 /** 使用自定义View创建 */
 - (IBAction)b5:(id)sender {
-    UIImageView *imageV=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"b"]];
-    AwAlertView *alertView=[[AwAlertView alloc]initWithTitle:@"title" message:@"这是一张风景图片这是一张风景图片这是一张风景图片这是一张风景图片这是一张风景图片" delegate:self customView:imageV cancelTitle:@"cancel" otherTitle:@"other"];
-    [alertView show];
-    alertView.closeImage=[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close"];
-    alertView.closeImage_hl=[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close_hl"];
 }
 /** 使用自定义View创建 */
 - (IBAction)b6:(id)sender {
@@ -125,13 +120,10 @@
     alertView.closeImage_hl=[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close_hl"];
 }
 - (IBAction)b9:(id)sender {
-    AwTipView *tipView=[[AwTipView alloc]initWithView:self.view message:@"tipsView" posY:110];
-    tipView.dimBackground=YES;
-    [tipView show];
+
 }
 - (IBAction)b10:(id)sender {
-    AwTipView *tipView=[[AwTipView alloc]initWithView:self.view title:@"title" message:@"message" posY:0];
-    [tipView show];
+
 }
 #pragma AwAlertView 高级功能
 - (IBAction)b11:(id)sender {

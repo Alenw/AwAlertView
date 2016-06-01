@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6036001F1CD8F26700EA6DD5 /* AwAlertViewlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6036001D1CD8F26700EA6DD5 /* AwAlertViewlib.bundle */; };
-		60DA56291CD9EB06001A12B6 /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DA56281CD9EB06001A12B6 /* AwAlertViewlib.framework */; };
+		6000F7741CFE8C9500B75F2A /* AwAlertViewlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6000F7721CFE8C9500B75F2A /* AwAlertViewlib.bundle */; };
+		6000F7781CFE8CE300B75F2A /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000F7771CFE8CE300B75F2A /* BViewController.m */; };
+		6000F77A1CFE99D000B75F2A /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6000F7791CFE99D000B75F2A /* AwAlertViewlib.framework */; };
 		6EE82D311C55CBBD005EA2CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D301C55CBBD005EA2CA /* main.m */; };
 		6EE82D341C55CBBD005EA2CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D331C55CBBD005EA2CA /* AppDelegate.m */; };
 		6EE82D371C55CBBD005EA2CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D361C55CBBD005EA2CA /* ViewController.m */; };
@@ -37,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6036001D1CD8F26700EA6DD5 /* AwAlertViewlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AwAlertViewlib.bundle; sourceTree = "<group>"; };
-		60DA56281CD9EB06001A12B6 /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
+		6000F7721CFE8C9500B75F2A /* AwAlertViewlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AwAlertViewlib.bundle; sourceTree = "<group>"; };
+		6000F7761CFE8CE300B75F2A /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		6000F7771CFE8CE300B75F2A /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		6000F7791CFE99D000B75F2A /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
 		6EE82D2C1C55CBBD005EA2CA /* AwlenAlertViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwlenAlertViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE82D301C55CBBD005EA2CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EE82D321C55CBBD005EA2CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60DA56291CD9EB06001A12B6 /* AwAlertViewlib.framework in Frameworks */,
+				6000F77A1CFE99D000B75F2A /* AwAlertViewlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +109,14 @@
 		6EE82D2E1C55CBBD005EA2CA /* AwlenAlertViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				60DA56281CD9EB06001A12B6 /* AwAlertViewlib.framework */,
-				6036001D1CD8F26700EA6DD5 /* AwAlertViewlib.bundle */,
+				6000F7791CFE99D000B75F2A /* AwAlertViewlib.framework */,
+				6000F7721CFE8C9500B75F2A /* AwAlertViewlib.bundle */,
 				6EE82D321C55CBBD005EA2CA /* AppDelegate.h */,
 				6EE82D331C55CBBD005EA2CA /* AppDelegate.m */,
 				6EE82D351C55CBBD005EA2CA /* ViewController.h */,
 				6EE82D361C55CBBD005EA2CA /* ViewController.m */,
+				6000F7761CFE8CE300B75F2A /* BViewController.h */,
+				6000F7771CFE8CE300B75F2A /* BViewController.m */,
 				6EE82D381C55CBBD005EA2CA /* Main.storyboard */,
 				6EE82D3B1C55CBBD005EA2CA /* Assets.xcassets */,
 				6EE82D3D1C55CBBD005EA2CA /* LaunchScreen.storyboard */,
@@ -253,7 +258,7 @@
 				6EE82D3F1C55CBBD005EA2CA /* LaunchScreen.storyboard in Resources */,
 				6EE82D3C1C55CBBD005EA2CA /* Assets.xcassets in Resources */,
 				6EE82D3A1C55CBBD005EA2CA /* Main.storyboard in Resources */,
-				6036001F1CD8F26700EA6DD5 /* AwAlertViewlib.bundle in Resources */,
+				6000F7741CFE8C9500B75F2A /* AwAlertViewlib.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE82D371C55CBBD005EA2CA /* ViewController.m in Sources */,
+				6000F7781CFE8CE300B75F2A /* BViewController.m in Sources */,
 				6EE82D341C55CBBD005EA2CA /* AppDelegate.m in Sources */,
 				6EE82D311C55CBBD005EA2CA /* main.m in Sources */,
 			);

@@ -7,6 +7,42 @@ https://github.com/Alenw/AwAlertView。
 
 ###### 这是一个多功能显示的AlertView，可以显示基本信息，还可以显示图片，显示自定义View，样式多样！集成非常简单，类似系统的AlertView。<br>
 ###### 这个Framework还包含一个AwTipView，这个类功能是用来展示信息，类似于安卓的吐司功能，不过这个功能还不是很完善，我会继续提交新的版本。<br>
+<hr>
+<ul>
+<li>增加三个初始化方法</li>
+ <li>增加show 和hide 方法</li>
+ <li>增加stlye,区分不同使用情况</li>
+</ul>
+<br>
+
+<br/>
+![](https://github.com/Alenw/AwAlertView/blob/master/wt3.gif)
+<br/>
+
+###### show And Hide 方法
+	    /*!
+             @method        show
+             @abstract      弹出
+             */
+            - (void)showAnimated:(BOOL)animated;
+
+            /*!
+             @param         animation 消失时是否使用动画
+             */
+            - (void)hideAnimated:(BOOL)animated;
+
+###### show 带block方法
+/**
+ *  默认执行完block中的内容会移除AwTipView
+ *
+ *  @param animated   是否启用动画
+ *  @param block      显示AwTipView时候执行的block
+ *  @param completion 完成时候执行的block
+ */
+- (void)showAnimated:(BOOL)animated whileExecutingBlock:(nullable dispatch_block_t)block completionBlock:(nullable void (^)())completion ;
+
+<hr>
+
 ###### AwAlertView 新增三种show的方法，showInPoint、showWithY、showInRect，功能如名字一样，  功能如下图演示GIF，如何使用请下载查看example Demo! <br><br>
 
 <br/>
