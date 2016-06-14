@@ -34,7 +34,7 @@ https://github.com/Alenw/AwAlertView。
       - (void)hideAnimated:(BOOL)animated;
 
 <br/>
-
+<br>
 ###### show 带block方法
 
 
@@ -48,7 +48,7 @@ https://github.com/Alenw/AwAlertView。
 
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(nullable dispatch_block_t)block completionBlock:(nullable void (^)())completion ;
 <br/>
-
+<br>
 ##### 类方法，简化使用
 
 
