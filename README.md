@@ -19,6 +19,7 @@ https://github.com/Alenw/AwAlertView。
 ![](https://github.com/Alenw/AwAlertView/blob/master/wt3.gif)
 <br/>
 
+
 ###### show And Hide 方法
      
    
@@ -34,7 +35,9 @@ https://github.com/Alenw/AwAlertView。
       - (void)hideAnimated:(BOOL)animated;
 
 <br/>
+
 <br>
+
 ###### show 带block方法
 
 
@@ -47,8 +50,11 @@ https://github.com/Alenw/AwAlertView。
  */
 
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(nullable dispatch_block_t)block completionBlock:(nullable void (^)())completion ;
+
 <br/>
-<br>
+
+
+
 ##### 类方法，简化使用
 
 
@@ -69,8 +75,8 @@ https://github.com/Alenw/AwAlertView。
 
 <br/>
 <hr>
-
-
+<br>
+<br>
 
 ##### AwAlertView介绍
 ###### 这是一个多功能显示的AlertView，可以显示基本信息，还可以显示图片，显示自定义View，样式多样！集成非常简单，类似系统的AlertView。<br>
@@ -81,8 +87,8 @@ https://github.com/Alenw/AwAlertView。
 <li>新增NSNotification字段 awAlertViewDismiss 用于移除 AwAlertView,详见Demo b10对应的自定义View </li>
 <li>优化show方法名称，弃用了一些属性，详见AwAlertView.h</li>
 <li>高级功能从b8 开始，演示自定义View，AwAlertView的contentView 响应键盘上移事件，介绍show方法使用等 </li>
-</ul>
-<br>
+</ul></ul>
+<br/>
 
 <br/>
 
