@@ -7,7 +7,7 @@
 //
 
 #import "BViewController.h"
-#import <AwAlertViewlib/AwAlertViewlib.h>
+#import <AwAlertViewlib/AwAlertView.h>
 
 @interface BViewController ()
 @property (nonatomic, assign) BOOL canceled;

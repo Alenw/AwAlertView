@@ -35,6 +35,7 @@ typedef void (^AwTipViewCompletionBlock)();
  *  @param animated 是否动画
  */
 +(void)hideForView:(nonnull UIView *)view Animated:(BOOL)animated;
+
 /*!
  * 仅对除进度指示器之外的style有效,如:AwTipViewStyleNone,AwTipViewStyleIndicatorMid,AwTipViewStyleIndicatorLeft
  @property      showTime
@@ -117,13 +118,14 @@ typedef enum {
 typedef enum {
     AwAlertViewAniDefaul=0,
     AwAlertViewAniStyle1,
-    AwAlertViewAniStyle2
+    AwAlertViewAniStyle2,
+    AwAlertViewAniStyle3
 }AwAlertViewAnimationStyle;
 
 @class AwAlertView;
 @protocol AwAlertViewDelegate <NSObject>
 @optional
-/** 按钮点击事件带领方法 */
+/** 按钮点击事件代理方法 */
 // before animation and hiding view
 - (void)awAlertView:(nonnull AwAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex;
 
@@ -135,6 +137,7 @@ typedef enum {
 
 /**
  *  禁止使用［AwAlertView alloc］init]形式创建对象
+ *  新增NSNotification awAlertViewDismiss 用于移除 AwAlertView,详见Demo b10
  */
 @interface AwAlertView : UIView
 @property (nonatomic, weak) id<AwAlertViewDelegate> delegate;
@@ -159,20 +162,13 @@ typedef enum {
 @property (nonatomic, copy,nullable) NSString *message;
 /** 信息字体颜色 */
 @property (nonatomic, copy,nullable) UIColor *messageTextColor;
+/** 取消按钮 */
+@property (nonatomic, strong,nullable) UIButton *cancelBtn;
+/** 确定按钮 */
+@property (nonatomic, strong,nullable) UIButton *otherBtn;
+/** 关闭按钮 */
+@property (nonatomic, strong,nullable) UIButton *closeBtn;
 
-/** 按钮颜色 */
-@property (nonatomic, copy,nullable) UIColor *cancelTextColor;
-/** 按钮图标 */
-@property (nonatomic, strong,nullable) UIImage *cancelImage;
-/** 按钮颜色 */
-@property (nonatomic, copy,nullable) UIColor *otherTextColor;
-/** 按钮图标 */
-@property (nonatomic, strong,nullable) UIImage *otherImage;
-
-/** 关闭按钮正常图片 */
-@property (nonatomic, strong,nullable) UIImage *closeImage;
-/** 关闭按钮高亮图片 */
-@property (nonatomic, strong,nullable) UIImage *closeImage_hl;
 
 /**
  *  标准样式AwAlertView
@@ -216,42 +212,55 @@ typedef enum {
 -(nullable instancetype)initWithStyle:(AwAlertViewStyle)awStyle title:(nullable NSString *)title message:(nullable NSString *)message delegate:(nullable id)delegate customView:(nullable UIView *)customview cancelTitle:(nullable NSString *)cancelText otherTitle:(nullable NSString *)otherText;
 
 #pragma mark - 不同需求的Show方法
+
 /**
- *  清除当前显示的AwAlertView
+ *  显示AwAlertView
+ *
+ *  @param animated 是否加载动画
  */
-- (void)dismiss;
-/**
- *  AlertView 展示方法
- */
--(void)show;
+- (void)showAnimated:(BOOL)animated;
 /**
  *  指定即将展示的View在父视图中的Y值,view显示位置居中
  *
  *  @param positionY 距离顶部的Y
  *  @param flag      标记是否动画
  */
--(void)showWithY:(CGFloat)positionY withAnimationFlag:(BOOL)flag;
+-(void)showAnimated:(BOOL)animated withPositionY:(CGFloat)posY;
 /**
  *  指定即将展示的View的距离底部的偏移值,view显示位置居中,标记是否选择动画
  *
  *  @param offset 距离底部的偏移量
  *  @param flag   标记是否动画
  */
--(void)showWithBottomYOffset:(CGFloat)offset withAnimationFlag:(BOOL)flag;
+-(void)showAnimated:(BOOL)animated WithBottomYOffset:(CGFloat)offset;
 
 /**
  *  指定在某个位置展示
  *
  *  @param position origin,frame坐标系中左顶点坐标
  */
--(void)showInPoint:(CGPoint)position;
+-(void)showAnimated:(BOOL)animated inPoint:(CGPoint)point;
 
 /**
  *  指定在某个区域显示,Note:如果是自定义View，只支持约束和在layoutSubViews重写的布局，
  *  如果这个方面不是太懂的尽量不用这个方法
  *  @param rect 相对父视图坐标系的frame
  */
--(void)showInRect:(CGRect)rect;
+-(void)showAnimated:(BOOL)animated inRect:(CGRect)rect;
+/**
+ *  移除AwAlertView
+ *  @param animated 是否加载动画
+ */
+- (void)dismissAnimated:(BOOL)animated;
+
+/**
+ *  延迟隐藏AwAlertView
+ *
+ *  @param animated 是否动画
+ *  @param delay    延迟时间
+ */
+- (void)hideAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay;
+
 /***************************************************************************/
 /*!
  @property      dimBackground
@@ -274,5 +283,23 @@ typedef enum {
  *  @param duration  持续时间,动画时间,键盘弹起的时间是0.25秒
  */
 - (void)awAlertViewAnimationWithPositionYValues:(CGFloat)positionY andDuration:(NSTimeInterval)duration;
+
+@end
+
+@interface AwAlertView (Deprecated)
+
+/** 按钮颜色 */
+@property (nonatomic, strong,nullable) UIColor *cancelTextColor __attribute__((deprecated("Use cancelBtn to set attributes.")));
+/** 按钮图标 */
+@property (nonatomic, strong,nullable) UIImage *cancelImage __attribute__((deprecated("Use cancelBtn to set attributes.")));
+/** 按钮颜色 */
+@property (nonatomic, strong,nullable) UIColor *otherTextColor __attribute__((deprecated("Use otherBtn to set attributes.")));
+/** 按钮图标 */
+@property (nonatomic, strong,nullable) UIImage *otherImage __attribute__((deprecated("Use otherBtn to set attributes.")));
+
+/** 关闭按钮正常图片 */
+@property (nonatomic, strong,nullable) UIImage *closeImage __attribute__((deprecated("Use closeBtn to set attributes.")));
+/** 关闭按钮高亮图片 */
+@property (nonatomic, strong,nullable) UIImage *closeImage_hl __attribute__((deprecated("Use closeBtn to set attributes.")));
 
 @end

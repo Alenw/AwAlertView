@@ -64,7 +64,7 @@
                                     <action selector="b6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKk-Pz-jXe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-M7-wq1">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-M7-wq1">
                                 <rect key="frame" x="20" y="343" width="152" height="30"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B7"/>
