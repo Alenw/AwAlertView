@@ -20,7 +20,9 @@ https://github.com/Alenw/AwAlertView。
 <br/>
 
 ###### show And Hide 方法
-	    /*!
+     
+   
+      /*!
        @method        show
        @abstract      弹出
       */
@@ -31,7 +33,10 @@ https://github.com/Alenw/AwAlertView。
       */
       - (void)hideAnimated:(BOOL)animated;
 
+<br/>
+
 ###### show 带block方法
+
 
 /**
  *  默认执行完block中的内容会移除AwTipView
@@ -42,8 +47,11 @@ https://github.com/Alenw/AwAlertView。
  */
 
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(nullable dispatch_block_t)block completionBlock:(nullable void (^)())completion ;
+<br/>
 
 ##### 类方法，简化使用
+
+
 /**
  *  类方法，显示message到指定View
  *
@@ -59,7 +67,10 @@ https://github.com/Alenw/AwAlertView。
  */
 +(void)hideForView:(nonnull UIView *)view Animated:(BOOL)animated;
 
+<br/>
 <hr>
+
+
 
 ##### AwAlertView介绍
 ###### 这是一个多功能显示的AlertView，可以显示基本信息，还可以显示图片，显示自定义View，样式多样！集成非常简单，类似系统的AlertView。<br>
@@ -73,9 +84,10 @@ https://github.com/Alenw/AwAlertView。
 </ul>
 <br>
 
-<br>
+<br/>
 
 #####新增加方法，用于解决弹出TextField键盘遮挡问题
+
 
   /**
    *  动态更新自定义View的Y值
@@ -89,20 +101,22 @@ https://github.com/Alenw/AwAlertView。
 
 #####新增两个属性
        
- 	/** 是否需要放弃键盘响应,这个属性与isUserHidden一起使用 */
-  @property (nonatomic, assign) BOOL needGiveupTouch;
 
-  /*!
-   *   @property      dimBackground
+ 	/** 是否需要放弃键盘响应,这个属性与isUserHidden一起使用 */
+        @property (nonatomic, assign) BOOL needGiveupTouch;
+
+        /*!
+         *   @property      dimBackground
  	 *   @abstract      是否显示背景渐变色,默认显示
 	 */
-	 @property (nonatomic, assign) BOOL hideDimBackground;
+ 	 @property (nonatomic, assign) BOOL hideDimBackground;
 	 
 <br/>
 
 #####pragma mark - 不同需求的Show方法
 
-   /**
+      
+         /**
 	  *  AlertView 展示方法
 	  */
 	 -(void)showAnimated:(BOOL)animated;
