@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AwAlertViewlib/AwAlertView.h>
 #import "CountSelectView.h"
+#import "TableViewController.h"
 
 @interface ViewController ()<UITextFieldDelegate,CountSelectViewDelegate>
 @property (nonatomic, weak) AwAlertView *alertView;
@@ -115,7 +116,8 @@
 }
 
 - (IBAction)b7:(id)sender {
-    
+    TableViewController *view=[[TableViewController alloc]init];
+    [self.navigationController pushViewController:view animated:YES];
 }
 /** 使用initWithContentView创建 */
 #pragma AwAlertView 高级功能

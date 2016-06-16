@@ -22,19 +22,43 @@ typedef void (^AwTipViewCompletionBlock)();
 
 @interface AwTipView : UIView
 /**
- *  类方法，显示message到指定View
- *
+ *  类方法，显示message到指定View,不会自动消失,必须调用 hideForView:Animated:方法
+ *  可以运用在HTTP加载时，加载成功手动隐藏
  *  @param message 将要显示到message
  *  @param view    View
  */
-+(void)showMessage:(nullable NSString *)message toView:(nonnull UIView *)view;
++(nullable AwTipView *)showMessage:(nullable NSString *)message toView:(nullable UIView *)view;
+/**
+ *  类方法,显示带图片的AwTipView 会自动隐藏，显示时间随success文字长度而改变(1个字符0.2s)
+ *  可以使用showtime字段修改显示时长
+ *  @param success success 信息
+ *  @param view    View
+ */
++(nullable AwTipView *)showSuccess:(nullable NSString *)success toView:(nullable UIView *)view;
+/**
+ *  类方法,显示带图片的AwTipView 会自动隐藏，显示时间随success文字长度而改变(1个字符0.2s)
+ *  可以使用showtime字段修改显示时长
+ *  @param success error 信息
+ *  @param view    View
+ */
++(nullable AwTipView *)showError:(nullable NSString *)error toView:(nullable UIView *)view;
+/**
+ *  显示icon，message到AwTipView中 会自动隐藏，显示时间随message文字长度而改变(1个字符0.2s)
+ *  可以使用showtime字段修改显示时长
+ *  @param iconName iconName，例如：AwAlertViewlib.bundle/success
+ *  @param message  message
+ *  @param view     view
+ *
+ *  @return AwTipView
+ */
++(nullable AwTipView *)showIcon:(nullable NSString *)iconName message:(nullable NSString *)message toView:(nullable UIView *)view;
 /**
  *  类方法，在View中移除AwTipView
  *
  *  @param view     view
  *  @param animated 是否动画
  */
-+(void)hideForView:(nonnull UIView *)view Animated:(BOOL)animated;
++(void)hideForView:(nullable UIView *)view Animated:(BOOL)animated;
 
 /*!
  * 仅对除进度指示器之外的style有效,如:AwTipViewStyleNone,AwTipViewStyleIndicatorMid,AwTipViewStyleIndicatorLeft
@@ -63,13 +87,14 @@ typedef void (^AwTipViewCompletionBlock)();
  @param         posY  离superView顶部的距离
  @result        BBTipView的对象
  */
-- (nullable instancetype)initWithView:(nonnull UIView *)view message:(nullable NSString *)message posY:(CGFloat)posY;
+- (nullable instancetype)initWithView:(nullable UIView *)view message:(nullable NSString *)message posY:(CGFloat)posY;
 
 
-- (nullable instancetype)initWithView:(nonnull UIView *)view title:(nullable NSString *)title message:(nullable NSString *)message posY:(CGFloat)posY;
+- (nullable instancetype)initWithView:(nullable UIView *)view title:(nullable NSString *)title message:(nullable NSString *)message posY:(CGFloat)posY;
 
-- (nullable instancetype)initWithTipStyle:(AwTipViewShowStyle)style inView:(nonnull UIView *)view title:(nullable NSString *)title message:(nullable NSString *)message posY:(CGFloat)posY;
+- (nullable instancetype)initWithTipStyle:(AwTipViewShowStyle)style inView:(nullable UIView *)view title:(nullable NSString *)title message:(nullable NSString *)message posY:(CGFloat)posY;
 
+- (nullable instancetype)initWithTipStyle:(AwTipViewShowStyle)style inView:(nullable UIView *)view icon:(nullable NSString *)iconName message:(nullable NSString *)message posY:(CGFloat)posY;
 /*!
  @method        show
  @abstract      弹出

@@ -7,7 +7,7 @@
 //
 
 #import "BViewController.h"
-#import <AwAlertViewlib/AwAlertView.h>
+#import <AwAlertViewlib/AwAlertViewlib.h>
 
 @interface BViewController ()
 @property (nonatomic, assign) BOOL canceled;
@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 - (IBAction)b1:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithView:self.showView message:@"BViewController" posY:100];
@@ -27,33 +27,31 @@
     [tipView showAnimated:YES];
 }
 - (IBAction)b2:(id)sender {
-    AwTipView *tipView=[[AwTipView alloc]initWithView:self.view message:@"BViewController" posY:0];
-    tipView.showTime=3;
-    tipView.contentColor=[UIColor redColor];
-    tipView.dimBackground=YES;
-    [tipView showAnimated:YES];
+    [AwTipView showSuccess:@"正在加载..." toView:nil];
 }
 - (IBAction)b3:(id)sender {
-    AwTipView *tipView=[[AwTipView alloc]initWithView:self.view title:@"BViewController" message:@"BViewController" posY:100];
-    tipView.showTime=3;
-    [tipView showAnimated:YES];
+    [AwTipView showError:@"正在加载..." toView:nil];
 }
 - (IBAction)b4:(id)sender {
+    AwTipView *tipview=[AwTipView showIcon:@"icon_option_right" message:@"收藏成功" toView:nil];
+    tipview.showTime=6;
+}
+- (IBAction)b5:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleIndicatorMid inView:self.view title:nil message:@"正在加载...正在加载...正在加载...正在加载..." posY:100];
     [tipView showAnimated:YES];
     [tipView hideAnimated:YES afterDelay:3];
 }
-- (IBAction)b5:(id)sender {
+- (IBAction)b6:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleIndicatorMid inView:self.view title:nil message:@"正在加载正在加载正在加载正在加载正在加载" posY:0];
     tipView.showTime=3;
     [tipView showAnimated:YES];
 }
-- (IBAction)b6:(id)sender {
+- (IBAction)b7:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleIndicatorLeft inView:self.view title:nil message:@"正在加载正在加载正在加载正在加载正在加载" posY:100];
     tipView.showTime=3;
     [tipView showAnimated:YES];
 }
-- (IBAction)b7:(id)sender {
+- (IBAction)b8:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleDeterminate inView:self.view title:nil message:@"正在加载..." posY:0];
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         // Do something useful in the background and update the HUD periodically.
@@ -65,7 +63,7 @@
     tipView.dimBackground=YES;
     [tipView showAnimated:YES];
 }
-- (IBAction)b8:(id)sender {
+- (IBAction)b9:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleAnnularDeterminate inView:self.view title:nil message:@"正在加载..." posY:0];
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         // Do something useful in the background and update the HUD periodically.
@@ -77,7 +75,8 @@
     tipView.dimBackground=YES;
     [tipView showAnimated:YES];
 }
-- (IBAction)b9:(id)sender {
+
+- (IBAction)b10:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleDeterminateHorizontalBar inView:self.showView title:nil message:@"正在加载..." posY:0];
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         // Do something useful in the background and update the HUD periodically.
@@ -88,8 +87,7 @@
     });
     [tipView showAnimated:YES];
 }
-
-- (IBAction)b10:(id)sender {
+- (IBAction)b11:(id)sender {
     AwTipView *tipView=[[AwTipView alloc]initWithTipStyle:AwTipViewStyleDeterminateHorizontalBar inView:self.view title:nil message:@"正在加载..." posY:0];
     //    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
     //        // Do something useful in the background and update the HUD periodically.
@@ -107,14 +105,11 @@
         NSLog(@"执行完了");
     }];
 }
-- (IBAction)b11:(id)sender {
+- (IBAction)b12:(id)sender {
     [AwTipView showMessage:@"正在加载..." toView:self.view];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [AwTipView hideForView:self.view Animated:YES];
     });
-}
-- (IBAction)b12:(id)sender {
-
 }
 - (void)doSomeWorkWithProgressWith:(UIView *)view {
     self.canceled = NO;
@@ -127,7 +122,7 @@
             // Instead we could have also passed a reference to the HUD
             // to the HUD to myProgressTask as a method parameter.
             AwTipView *tipView=[AwTipView HUDForView:view];
-//            NSLog(@"%@",@(progress));
+            //            NSLog(@"%@",@(progress));
             tipView.progress = progress;
         });
         usleep(50000);
@@ -139,13 +134,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
