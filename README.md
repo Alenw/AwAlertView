@@ -5,6 +5,13 @@ https://github.com/Alenw/AwAlertView。
 <br/>
 #####更多精彩内容，请查看demo！
 
+###### SomeQusetions in Framework !
+1.如果调用Framework中的方法出现unrecognized selector sent to instance xxxx，请按照下面解决方法；
+If this is part of a static library, you need to add -all_load to the Other Linker Flags build setting for the app linking against the library.
+2.如果上传APP时出现 XCode 7上传遇到ERROR ITMS-90535 Unexpected CFBundleExecutable Key. 的解决办法
+找到对应的bundle，删除info.plist里面的Executable file对应的一整行，包括值。
+
+
 ####   AwTipView介绍
 ###### 这个Framework还包含一个AwTipView，这个类功能是用来展示信息，类似于安卓的吐司功能，我会继续提交新的版本完善。<br>
 <hr>
