@@ -21,7 +21,7 @@ If this is part of a static library, you need to add -all_load to the Other Link
 <li>增加三个初始化方法</li>
  <li>增加show 和hide 方法</li>
  <li>增加stlye,区分不同使用情况</li>
-
+</ul>
 <br>
 
 <br/>
@@ -46,7 +46,7 @@ If this is part of a static library, you need to add -all_load to the Other Link
 <br/>
 
 <br>
-
+<br/>
 ###### show 带block方法
 
 
@@ -97,18 +97,19 @@ If this is part of a static library, you need to add -all_load to the Other Link
 <li>优化show方法名称，弃用了一些属性，详见AwAlertView.h</li>
 <li>高级功能从b8 开始，演示自定义View，AwAlertView的contentView 响应键盘上移事件，介绍show方法使用等 </li>
 <li>拆分显示动画和移除动画，增加字段showtime用于广告使用，当showtime有值，将在contentView右上角显示</li>
+</ul>
 <br/>
 
 <br/>
 
-/** 提供多个动画效果，默认AwAlertViewAniDefault */
+/** 提供多个动画效果，默认AwAlertViewAniDefault */<br/>
 @property (nonatomic, assign) AwAlertViewAnimationStyle animationStyle;
 
-/** 提供多个移除动画，默认AwDismissDefault */
+/** 提供多个移除动画，默认AwDismissDefault */<br/>
 @property (nonatomic, assign) AwDismissAnimation dismissAnimation;
-/** block,注意:只响应一次 */
+/** block,注意:只响应一次 */<br/>
 @property (nonatomic, copy,nullable) AwTipViewCompletionBlock clickBlock;
-
+<br/>
 ![](https://github.com/Alenw/AwAlertView/blob/master/launchAd.gif)
 </br>
 
