@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="acY-kP-YYH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lsF-04-7mi">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--AwlenAlertViewExample-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -124,9 +125,6 @@
                                 <rect key="frame" x="187" y="117" width="152" height="30"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.4823529412" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="B14"/>
-                                <connections>
-                                    <segue destination="BCu-M1-PC8" kind="push" id="s2f-sI-zGn"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -135,12 +133,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053" y="466"/>
+            <point key="canvasLocation" x="1865" y="466"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--AwAlertView-->
         <scene sceneID="v5v-Zs-pv6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acY-kP-YYH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="AwAlertView" id="rpq-Qn-cGP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fX4-qn-Fhq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -153,12 +152,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52u-kV-wBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="427" y="466"/>
+            <point key="canvasLocation" x="1239" y="466"/>
         </scene>
         <!--BViewController-->
         <scene sceneID="Cvc-8i-Koq">
             <objects>
-                <viewController id="BCu-M1-PC8" customClass="BViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BCu-M1-PC8" customClass="BViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YnH-VA-haq"/>
                         <viewControllerLayoutGuide type="bottom" id="ksT-Li-h0T"/>
@@ -273,7 +272,7 @@
                                     <action selector="b11:" destination="BCu-M1-PC8" eventType="touchUpInside" id="R0m-Lc-zTb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDo-5I-64m">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDo-5I-64m">
                                 <rect key="frame" x="164" y="119" width="426" height="471"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -336,7 +335,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buV-eX-o0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="461"/>
+            <point key="canvasLocation" x="1865" y="1152"/>
+        </scene>
+        <!--AwTipView-->
+        <scene sceneID="F4y-1y-E7W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ntG-o5-NPG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="AwTipView" id="QZF-bv-Ife"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="40M-33-fzO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BCu-M1-PC8" kind="relationship" relationship="rootViewController" id="rxf-Mv-UlN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqu-sV-UAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="1152"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="igx-uP-EUV">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lsF-04-7mi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DTf-2u-RC1">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="acY-kP-YYH" kind="relationship" relationship="viewControllers" id="UTz-FP-buo"/>
+                        <segue destination="ntG-o5-NPG" kind="relationship" relationship="viewControllers" id="7ym-8q-xAg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXW-6c-Ld2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="834"/>
         </scene>
     </scenes>
 </document>

@@ -10,6 +10,7 @@
 #import <AwAlertViewlib/AwAlertView.h>
 #import "CountSelectView.h"
 #import "TableViewController.h"
+#import "WebViewController.h"
 
 @interface ViewController ()<UITextFieldDelegate,CountSelectViewDelegate>
 @property (nonatomic, weak) AwAlertView *alertView;
@@ -48,6 +49,34 @@
 }
 -(void)notificationRech:(NSNotification *)noti{
     NSLog(@"notificationRech");
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    static dispatch_once_t onceT;
+    dispatch_once(&onceT, ^{
+        UIImageView *view=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"a"]];
+        view.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-160);
+        AwAlertView *alertView=[[AwAlertView alloc]initWithContentView:view];
+        alertView.showTime=20;
+        alertView.isUseHidden=YES;
+        alertView.dismissAnimation=AwDismissOut;
+        __weak typeof(AwAlertView) *weakA=alertView;
+        alertView.clickBlock=^(){
+            NSLog(@"clickBlock--clicked");
+            
+            WebViewController *webView=[[WebViewController alloc]init];
+            webView.url=@"http://www.baidu.com";
+            webView.title=@"百度链接";
+            [self.navigationController pushViewController:webView animated:YES];
+            weakA.dismissAnimation=AwDismissDefault;
+            [weakA dismissAnimated:YES];
+        };
+        alertView.backgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"launch750"]];
+        alertView.animationStyle=AwAlertViewAniStyle3;
+        [alertView showAnimated:YES withPositionY:0];
+    });
 }
 /** 使用不同Style创建 */
 - (IBAction)b1:(id)sender {

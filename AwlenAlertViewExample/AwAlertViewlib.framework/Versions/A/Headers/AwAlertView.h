@@ -147,6 +147,12 @@ typedef enum {
     AwAlertViewAniStyle3
 }AwAlertViewAnimationStyle;
 
+typedef enum {
+    AwDismissDefault=0,
+    AwDismissDown,
+    AwDismissOut
+}AwDismissAnimation;
+
 @class AwAlertView;
 @protocol AwAlertViewDelegate <NSObject>
 @optional
@@ -166,7 +172,16 @@ typedef enum {
  */
 @interface AwAlertView : UIView
 @property (nonatomic, weak) id<AwAlertViewDelegate> delegate;
+
 @property (nonatomic, assign) AwAlertViewStyle awStyle;
+
+/** 提供多个动画效果，默认AwAlertViewAniDefault */
+@property (nonatomic, assign) AwAlertViewAnimationStyle animationStyle;
+
+/** 提供多个移除动画，默认AwDismissDefault */
+@property (nonatomic, assign) AwDismissAnimation dismissAnimation;
+/** block,注意:只响应一次 */
+@property (nonatomic, copy,nullable) AwTipViewCompletionBlock clickBlock;
 /*!
  是否正在显示
  */
@@ -175,6 +190,13 @@ typedef enum {
  背景视图，覆盖全屏的，默认nil
  */
 @property (nonatomic, strong,nullable) UIView *backgroundView;
+
+/*!
+ * 在contentView左上角加showTime时间
+ @property      showTime
+ @abstract      展示的时间，可设置
+ */
+@property (nonatomic, assign) unsigned int showTime;
 
 /*****************************下面属性作用域**********************************/
 
@@ -294,8 +316,6 @@ typedef enum {
 @property (nonatomic, assign) BOOL hideDimBackground;
 /** 是否启用背景事件，默认不启用 */
 @property (nonatomic, assign) BOOL isUseHidden;
-/** 提供多个动画效果，默认AwAlertViewAniDefault */
-@property (nonatomic, assign) AwAlertViewStyle animationStyle;
 
 /** 是否需要放弃键盘响应,这个属性与isUserHidden一起使用 */
 @property (nonatomic, assign) BOOL needGiveupTouch;

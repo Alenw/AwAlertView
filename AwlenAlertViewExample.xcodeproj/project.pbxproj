@@ -11,16 +11,17 @@
 		6000F7781CFE8CE300B75F2A /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000F7771CFE8CE300B75F2A /* BViewController.m */; };
 		6082ACD71D0EF822006CA072 /* CountSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082ACD51D0EF822006CA072 /* CountSelectView.m */; };
 		6082ACD81D0EF822006CA072 /* CountSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6082ACD61D0EF822006CA072 /* CountSelectView.xib */; };
+		60CFB8D71D18F61C005B87F3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CFB8D61D18F61C005B87F3 /* WebViewController.m */; };
+		60CFB8DD1D19047C005B87F3 /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CFB8DC1D19047C005B87F3 /* AwAlertViewlib.framework */; };
+		60CFB8DF1D1912B5005B87F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60CFB8DE1D1912B5005B87F3 /* LaunchScreen.storyboard */; };
 		60F548D11D1002400026BC27 /* FlowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F548D01D1002400026BC27 /* FlowerView.m */; };
 		60F548D31D1002490026BC27 /* FlowerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F548D21D1002490026BC27 /* FlowerView.xib */; };
 		60F548D61D10031C0026BC27 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F548D51D10031C0026BC27 /* TableViewController.m */; };
-		60F548DA1D1006570026BC27 /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F548D91D1006570026BC27 /* AwAlertViewlib.framework */; };
 		6EE82D311C55CBBD005EA2CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D301C55CBBD005EA2CA /* main.m */; };
 		6EE82D341C55CBBD005EA2CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D331C55CBBD005EA2CA /* AppDelegate.m */; };
 		6EE82D371C55CBBD005EA2CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D361C55CBBD005EA2CA /* ViewController.m */; };
 		6EE82D3A1C55CBBD005EA2CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE82D381C55CBBD005EA2CA /* Main.storyboard */; };
 		6EE82D3C1C55CBBD005EA2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE82D3B1C55CBBD005EA2CA /* Assets.xcassets */; };
-		6EE82D3F1C55CBBD005EA2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE82D3D1C55CBBD005EA2CA /* LaunchScreen.storyboard */; };
 		6EE82D4A1C55CBBD005EA2CA /* AwlenAlertViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D491C55CBBD005EA2CA /* AwlenAlertViewExampleTests.m */; };
 		6EE82D551C55CBBD005EA2CA /* AwlenAlertViewExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D541C55CBBD005EA2CA /* AwlenAlertViewExampleUITests.m */; };
 /* End PBXBuildFile section */
@@ -49,12 +50,15 @@
 		6082ACD41D0EF822006CA072 /* CountSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountSelectView.h; sourceTree = "<group>"; };
 		6082ACD51D0EF822006CA072 /* CountSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountSelectView.m; sourceTree = "<group>"; };
 		6082ACD61D0EF822006CA072 /* CountSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountSelectView.xib; sourceTree = "<group>"; };
+		60CFB8D51D18F61C005B87F3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		60CFB8D61D18F61C005B87F3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		60CFB8DC1D19047C005B87F3 /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
+		60CFB8DE1D1912B5005B87F3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60F548CF1D1002400026BC27 /* FlowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerView.h; sourceTree = "<group>"; };
 		60F548D01D1002400026BC27 /* FlowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerView.m; sourceTree = "<group>"; };
 		60F548D21D1002490026BC27 /* FlowerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowerView.xib; sourceTree = "<group>"; };
 		60F548D41D10031C0026BC27 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		60F548D51D10031C0026BC27 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		60F548D91D1006570026BC27 /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
 		6EE82D2C1C55CBBD005EA2CA /* AwlenAlertViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwlenAlertViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE82D301C55CBBD005EA2CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EE82D321C55CBBD005EA2CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +67,6 @@
 		6EE82D361C55CBBD005EA2CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6EE82D391C55CBBD005EA2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EE82D3B1C55CBBD005EA2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6EE82D3E1C55CBBD005EA2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EE82D401C55CBBD005EA2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE82D451C55CBBD005EA2CA /* AwlenAlertViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwlenAlertViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE82D491C55CBBD005EA2CA /* AwlenAlertViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwlenAlertViewExampleTests.m; sourceTree = "<group>"; };
@@ -78,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F548DA1D1006570026BC27 /* AwAlertViewlib.framework in Frameworks */,
+				60CFB8DD1D19047C005B87F3 /* AwAlertViewlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +125,7 @@
 		6EE82D2E1C55CBBD005EA2CA /* AwlenAlertViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				60F548D91D1006570026BC27 /* AwAlertViewlib.framework */,
+				60CFB8DC1D19047C005B87F3 /* AwAlertViewlib.framework */,
 				6000F7721CFE8C9500B75F2A /* AwAlertViewlib.bundle */,
 				6EE82D321C55CBBD005EA2CA /* AppDelegate.h */,
 				6EE82D331C55CBBD005EA2CA /* AppDelegate.m */,
@@ -132,6 +135,8 @@
 				60F548D51D10031C0026BC27 /* TableViewController.m */,
 				6000F7761CFE8CE300B75F2A /* BViewController.h */,
 				6000F7771CFE8CE300B75F2A /* BViewController.m */,
+				60CFB8D51D18F61C005B87F3 /* WebViewController.h */,
+				60CFB8D61D18F61C005B87F3 /* WebViewController.m */,
 				6082ACD41D0EF822006CA072 /* CountSelectView.h */,
 				6082ACD51D0EF822006CA072 /* CountSelectView.m */,
 				6082ACD61D0EF822006CA072 /* CountSelectView.xib */,
@@ -139,8 +144,8 @@
 				60F548D01D1002400026BC27 /* FlowerView.m */,
 				60F548D21D1002490026BC27 /* FlowerView.xib */,
 				6EE82D381C55CBBD005EA2CA /* Main.storyboard */,
+				60CFB8DE1D1912B5005B87F3 /* LaunchScreen.storyboard */,
 				6EE82D3B1C55CBBD005EA2CA /* Assets.xcassets */,
-				6EE82D3D1C55CBBD005EA2CA /* LaunchScreen.storyboard */,
 				6EE82D401C55CBBD005EA2CA /* Info.plist */,
 				6EE82D2F1C55CBBD005EA2CA /* Supporting Files */,
 			);
@@ -276,10 +281,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EE82D3F1C55CBBD005EA2CA /* LaunchScreen.storyboard in Resources */,
 				6082ACD81D0EF822006CA072 /* CountSelectView.xib in Resources */,
 				6EE82D3C1C55CBBD005EA2CA /* Assets.xcassets in Resources */,
 				60F548D31D1002490026BC27 /* FlowerView.xib in Resources */,
+				60CFB8DF1D1912B5005B87F3 /* LaunchScreen.storyboard in Resources */,
 				6EE82D3A1C55CBBD005EA2CA /* Main.storyboard in Resources */,
 				6000F7741CFE8C9500B75F2A /* AwAlertViewlib.bundle in Resources */,
 			);
@@ -309,6 +314,7 @@
 				6082ACD71D0EF822006CA072 /* CountSelectView.m in Sources */,
 				6EE82D371C55CBBD005EA2CA /* ViewController.m in Sources */,
 				6000F7781CFE8CE300B75F2A /* BViewController.m in Sources */,
+				60CFB8D71D18F61C005B87F3 /* WebViewController.m in Sources */,
 				6EE82D341C55CBBD005EA2CA /* AppDelegate.m in Sources */,
 				6EE82D311C55CBBD005EA2CA /* main.m in Sources */,
 				60F548D61D10031C0026BC27 /* TableViewController.m in Sources */,
@@ -356,14 +362,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6EE82D3D1C55CBBD005EA2CA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6EE82D3E1C55CBBD005EA2CA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -403,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -440,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -451,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AwlenAlertViewExample",
@@ -466,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AwlenAlertViewExample",

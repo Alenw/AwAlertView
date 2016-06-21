@@ -7,10 +7,12 @@ https://github.com/Alenw/AwAlertView。
 
 ###### SomeQusetions in Framework !
 1.如果调用Framework中的方法出现unrecognized selector sent to instance xxxx，请按照下面解决方法；
+</br>
 If this is part of a static library, you need to add -all_load to the Other Linker Flags build setting for the app linking against the library.
+</br>
 2.如果上传APP时出现 XCode 7上传遇到ERROR ITMS-90535 Unexpected CFBundleExecutable Key. 的解决办法
 找到对应的bundle，删除info.plist里面的Executable file对应的一整行，包括值。
-
+</br>
 
 ####   AwTipView介绍
 ###### 这个Framework还包含一个AwTipView，这个类功能是用来展示信息，类似于安卓的吐司功能，我会继续提交新的版本完善。<br>
@@ -19,7 +21,7 @@ If this is part of a static library, you need to add -all_load to the Other Link
 <li>增加三个初始化方法</li>
  <li>增加show 和hide 方法</li>
  <li>增加stlye,区分不同使用情况</li>
-</ul>
+
 <br>
 
 <br/>
@@ -94,10 +96,21 @@ If this is part of a static library, you need to add -all_load to the Other Link
 <li>新增NSNotification字段 awAlertViewDismiss 用于移除 AwAlertView,详见Demo b10对应的自定义View </li>
 <li>优化show方法名称，弃用了一些属性，详见AwAlertView.h</li>
 <li>高级功能从b8 开始，演示自定义View，AwAlertView的contentView 响应键盘上移事件，介绍show方法使用等 </li>
-</ul></ul>
+<li>拆分显示动画和移除动画，增加字段showtime用于广告使用，当showtime有值，将在contentView右上角显示</li>
 <br/>
 
 <br/>
+
+/** 提供多个动画效果，默认AwAlertViewAniDefault */
+@property (nonatomic, assign) AwAlertViewAnimationStyle animationStyle;
+
+/** 提供多个移除动画，默认AwDismissDefault */
+@property (nonatomic, assign) AwDismissAnimation dismissAnimation;
+/** block,注意:只响应一次 */
+@property (nonatomic, copy,nullable) AwTipViewCompletionBlock clickBlock;
+
+![](https://github.com/Alenw/AwAlertView/blob/master/launchAd.gif)
+</br>
 
 #####新增加方法，用于解决弹出TextField键盘遮挡问题
 
