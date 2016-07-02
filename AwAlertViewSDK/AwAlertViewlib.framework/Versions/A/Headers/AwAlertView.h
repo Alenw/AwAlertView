@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#define AwDebug 1
 typedef enum {
     AwTipViewStyleNone=0,//不显示图片
     AwTipViewStyleIndicatorMid,//显示进度指示器到中间

@@ -8,7 +8,7 @@
         <!--AwlenAlertViewExample-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -138,7 +138,7 @@
         <!--AwAlertView-->
         <scene sceneID="v5v-Zs-pv6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acY-kP-YYH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="acY-kP-YYH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="AwAlertView" id="rpq-Qn-cGP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fX4-qn-Fhq">
@@ -157,7 +157,7 @@
         <!--BViewController-->
         <scene sceneID="Cvc-8i-Koq">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="BCu-M1-PC8" customClass="BViewController" sceneMemberID="viewController">
+                <viewController id="BCu-M1-PC8" customClass="BViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YnH-VA-haq"/>
                         <viewControllerLayoutGuide type="bottom" id="ksT-Li-h0T"/>

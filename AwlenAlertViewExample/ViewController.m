@@ -59,7 +59,7 @@
         UIImageView *view=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"a"]];
         view.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-160);
         AwAlertView *alertView=[[AwAlertView alloc]initWithContentView:view];
-        alertView.showTime=20;
+        alertView.showTime=3;
         alertView.isUseHidden=YES;
         alertView.dismissAnimation=AwDismissOut;
         __weak typeof(AwAlertView) *weakA=alertView;
