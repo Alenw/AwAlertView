@@ -12,11 +12,11 @@
 		6082ACD71D0EF822006CA072 /* CountSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082ACD51D0EF822006CA072 /* CountSelectView.m */; };
 		6082ACD81D0EF822006CA072 /* CountSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6082ACD61D0EF822006CA072 /* CountSelectView.xib */; };
 		60CFB8D71D18F61C005B87F3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CFB8D61D18F61C005B87F3 /* WebViewController.m */; };
-		60CFB8DD1D19047C005B87F3 /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CFB8DC1D19047C005B87F3 /* AwAlertViewlib.framework */; };
 		60CFB8DF1D1912B5005B87F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60CFB8DE1D1912B5005B87F3 /* LaunchScreen.storyboard */; };
 		60F548D11D1002400026BC27 /* FlowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F548D01D1002400026BC27 /* FlowerView.m */; };
 		60F548D31D1002490026BC27 /* FlowerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F548D21D1002490026BC27 /* FlowerView.xib */; };
 		60F548D61D10031C0026BC27 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F548D51D10031C0026BC27 /* TableViewController.m */; };
+		60F6F2BD1D486373009FE7CD /* AwAlertViewlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F6F2BC1D486373009FE7CD /* AwAlertViewlib.framework */; };
 		6EE82D311C55CBBD005EA2CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D301C55CBBD005EA2CA /* main.m */; };
 		6EE82D341C55CBBD005EA2CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D331C55CBBD005EA2CA /* AppDelegate.m */; };
 		6EE82D371C55CBBD005EA2CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE82D361C55CBBD005EA2CA /* ViewController.m */; };
@@ -52,13 +52,13 @@
 		6082ACD61D0EF822006CA072 /* CountSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountSelectView.xib; sourceTree = "<group>"; };
 		60CFB8D51D18F61C005B87F3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		60CFB8D61D18F61C005B87F3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		60CFB8DC1D19047C005B87F3 /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
 		60CFB8DE1D1912B5005B87F3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60F548CF1D1002400026BC27 /* FlowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerView.h; sourceTree = "<group>"; };
 		60F548D01D1002400026BC27 /* FlowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerView.m; sourceTree = "<group>"; };
 		60F548D21D1002490026BC27 /* FlowerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowerView.xib; sourceTree = "<group>"; };
 		60F548D41D10031C0026BC27 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		60F548D51D10031C0026BC27 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		60F6F2BC1D486373009FE7CD /* AwAlertViewlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AwAlertViewlib.framework; sourceTree = "<group>"; };
 		6EE82D2C1C55CBBD005EA2CA /* AwlenAlertViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwlenAlertViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE82D301C55CBBD005EA2CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EE82D321C55CBBD005EA2CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60CFB8DD1D19047C005B87F3 /* AwAlertViewlib.framework in Frameworks */,
+				60F6F2BD1D486373009FE7CD /* AwAlertViewlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		6EE82D2E1C55CBBD005EA2CA /* AwlenAlertViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				60CFB8DC1D19047C005B87F3 /* AwAlertViewlib.framework */,
+				60F6F2BC1D486373009FE7CD /* AwAlertViewlib.framework */,
 				6000F7721CFE8C9500B75F2A /* AwAlertViewlib.bundle */,
 				6EE82D321C55CBBD005EA2CA /* AppDelegate.h */,
 				6EE82D331C55CBBD005EA2CA /* AppDelegate.m */,

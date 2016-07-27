@@ -236,7 +236,7 @@
                                     <action selector="b8:" destination="BCu-M1-PC8" eventType="touchUpInside" id="Aum-Go-T7P"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-UA-pRL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-UA-pRL">
                                 <rect key="frame" x="164" y="79" width="130" height="30"/>
                                 <color key="backgroundColor" red="0.57194396869999997" green="0.64611483839999995" blue="0.80581247810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

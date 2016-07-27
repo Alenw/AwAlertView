@@ -106,10 +106,15 @@
     }];
 }
 - (IBAction)b12:(id)sender {
-    [AwTipView showMessage:@"正在加载..." toView:self.view];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [AwTipView hideForView:self.view Animated:YES];
-    });
+    AwTipView *tipview=[AwTipView showIcon:@"icon_option_right" message:@"收藏成功" toView:nil];
+    tipview.showTime=20;
+    tipview.contentView.color=[UIColor colorWithWhite:0.3 alpha:1.0];
+    tipview.contentView.margin=15;
+    tipview.contentView.orientation=0;
+    tipview.contentView.offset=0;
+    tipview.contentView.corner=5;
+    //后期开放位置接口
+    tipview.contentView.special=YES;
 }
 - (void)doSomeWorkWithProgressWith:(UIView *)view {
     self.canceled = NO;
