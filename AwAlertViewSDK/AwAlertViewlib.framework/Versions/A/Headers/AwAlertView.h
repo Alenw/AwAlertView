@@ -21,6 +21,7 @@ typedef enum {
 
 typedef void (^AwTipViewCompletionBlock)();
 
+NS_ASSUME_NONNULL_BEGIN
 /**
  *  这是一个绘制View背景色的方法
  *
@@ -33,114 +34,12 @@ typedef void (^AwTipViewCompletionBlock)();
  *  @param corner      绘制的圆角大小，一般是5;
  *  @param special     是否绘制带三角形指向
  */
-static void addBackgroundTipColor(CGContextRef context, CGRect rect,int orientation,float offset,float margin,UIColor *color,float corner,BOOL special){
-    CGFloat width=rect.size.width;
-    CGFloat height=rect.size.height;
-    
-    if (special) {
-        switch (orientation) {
-            case 0:case 1:{
-                if (offset<0) {
-                    if (offset-margin<-width/2) {
-                        offset=-width/2+margin+corner;
-                    }
-                }else {
-                    if (offset+margin>width/2) {
-                        offset=width/2-margin-corner;
-                    }
-                }
-                if (orientation==0) {
-                    CGContextMoveToPoint(context, width/2+offset, 0);
-                    CGContextAddLineToPoint(context, width/2-margin+offset, margin);
-                    CGContextAddLineToPoint(context, corner, margin);
-                    //绘制圆角
-                    CGContextAddQuadCurveToPoint(context, 0, margin, 0, margin+corner);
-                    CGContextAddLineToPoint(context, 0, height-corner);
-                    CGContextAddQuadCurveToPoint(context, 0, height, corner, height);
-                    CGContextAddLineToPoint(context, width-corner, height);
-                    CGContextAddQuadCurveToPoint(context, width, height, width, height-corner);
-                    CGContextAddLineToPoint(context, width, margin+corner);
-                    CGContextAddQuadCurveToPoint(context, width, margin, width-corner, margin);
-                    CGContextAddLineToPoint(context, width/2+margin+offset, margin);
-                }else{
-                    CGContextMoveToPoint(context, 0, corner);
-                    CGContextAddLineToPoint(context, 0, height-margin-corner);
-                    CGContextAddQuadCurveToPoint(context, 0, height-margin, corner, height-margin);
-                    
-                    CGContextAddLineToPoint(context, width/2-margin+offset, height-margin);
-                    CGContextAddLineToPoint(context, width/2+offset, height);
-                    CGContextAddLineToPoint(context, width/2+margin+offset, height-margin);
-                    CGContextAddLineToPoint(context, width-corner, height-margin);
-                    CGContextAddQuadCurveToPoint(context, width, height-margin, width, height-margin-corner);
-                    CGContextAddLineToPoint(context, width, corner);
-                    CGContextAddQuadCurveToPoint(context, width, 0, width-corner, 0);
-                    CGContextAddLineToPoint(context, corner, 0);
-                    CGContextAddQuadCurveToPoint(context, 0, 0, 0, corner);
-                }
-                break;
-            }
-            case 2:case 3:{
-                if (offset<0) {
-                    if (offset-margin<-height/2) {
-                        offset=-height/2+margin+corner;
-                    }
-                }else {
-                    if (offset+margin>height/2) {
-                        offset=height/2-margin-corner;
-                    }
-                }
-                if (orientation==2) {
-                    CGContextMoveToPoint(context, margin, corner);
-                    CGContextAddLineToPoint(context, margin, height/2-margin+offset);
-                    CGContextAddLineToPoint(context, 0, height/2+offset);
-                    CGContextAddLineToPoint(context, margin, height/2+margin+offset);
-                    CGContextAddLineToPoint(context, margin, height-corner);
-                    CGContextAddQuadCurveToPoint(context, margin, height, margin+corner, height);
-                    CGContextAddLineToPoint(context, width-corner, height);
-                    CGContextAddQuadCurveToPoint(context, width, height, width, height-corner);
-                    CGContextAddLineToPoint(context, width, corner);
-                    CGContextAddQuadCurveToPoint(context, width, 0, width-corner, 0);
-                    CGContextAddLineToPoint(context, margin+corner, 0);
-                    CGContextAddQuadCurveToPoint(context, margin, 0, margin, corner);
-                }else{
-                    CGContextMoveToPoint(context, 0, corner);
-                    CGContextAddLineToPoint(context, 0, height-corner);
-                    CGContextAddQuadCurveToPoint(context, 0, height, corner, height);
-                    CGContextAddLineToPoint(context, width-margin-corner, height);
-                    CGContextAddQuadCurveToPoint(context, width-margin, height, width-margin, height-corner);
-                    CGContextAddLineToPoint(context, width-margin, height/2+margin+offset);
-                    CGContextAddLineToPoint(context, width, height/2+offset);
-                    CGContextAddLineToPoint(context, width-margin, height/2-margin+offset);
-                    CGContextAddLineToPoint(context, width-margin, corner);
-                    CGContextAddQuadCurveToPoint(context, width-margin, 0, width-margin-corner, 0);
-                    CGContextAddLineToPoint(context, corner, 0);
-                    CGContextAddQuadCurveToPoint(context, 0, 0, 0, corner);
-                }
-                break;
-            }
-            default:
-                break;
-        }
-        
-    }else{
-        
-        CGContextMoveToPoint(context, 0, corner);
-        CGContextAddLineToPoint(context, 0, height-corner);
-        CGContextAddQuadCurveToPoint(context, 0, height, corner, height);
-        CGContextAddLineToPoint(context, width-corner, height);
-        CGContextAddQuadCurveToPoint(context, width, height, width, height-corner);
-        CGContextAddLineToPoint(context, width, corner);
-        CGContextAddQuadCurveToPoint(context, width, 0, width-corner, 0);
-        CGContextAddLineToPoint(context, corner, 0);
-        CGContextAddQuadCurveToPoint(context, 0, 0, 0, corner);
-    }
-    CGContextClosePath(context);
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillPath(context);
-}
+ extern void addBackgroundTipColor(CGContextRef context, CGRect rect,int orientation,float offset,float margin,UIColor *color,float corner,BOOL special);
+NS_ASSUME_NONNULL_END
 
-@class AwView;
+@class AwBgView;
 @interface AwTipView : UIView
+
 /**
  *  类方法，显示message到指定View,不会自动消失,必须调用 hideForView:Animated:方法
  *  可以运用在HTTP加载时，加载成功手动隐藏
@@ -194,7 +93,7 @@ static void addBackgroundTipColor(CGContextRef context, CGRect rect,int orientat
 @property (nonatomic, assign) BOOL dimBackground;
 
 /** 默认背景色是0.8 black ,0.8white 0.8alph */
-@property (nonatomic, strong,nullable) AwView *contentView;
+@property (nonatomic, strong,nullable) AwBgView *contentView;
 
 /**
  * The progress of the progress indicator, from 0.0 to 1.0. Defaults to 0.0.
@@ -474,7 +373,7 @@ typedef enum {
 
 @end
 
-@interface AwView : UIView
+@interface AwBgView : UIView
 /** 方向 */
 @property (nonatomic, assign) int orientation;
 /** 偏移量 */
