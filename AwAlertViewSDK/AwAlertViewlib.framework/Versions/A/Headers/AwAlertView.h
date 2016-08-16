@@ -4,11 +4,12 @@
 //
 //  Created by yelin on 16/5/23.
 //  Copyright © 2016年 AlenW. All rights reserved.
-//
+// 2016-08-16
 
 #import <UIKit/UIKit.h>
 
 #define AwDebug 1
+/** AwTipView 显示样式 */
 typedef enum {
     AwTipViewStyleNone=0,//不显示图片
     AwTipViewStyleIndicatorMid,//显示进度指示器到中间
@@ -153,7 +154,7 @@ NS_ASSUME_NONNULL_END
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(nullable dispatch_block_t)block completionBlock:(nullable void (^)())completion ;
 @end
 
-
+/** AwAlertView默认4种样式,其他样式请自定义 */
 typedef enum {
     AwAlertViewDefault=0,
     AwAlertViewStyle1,
@@ -161,17 +162,20 @@ typedef enum {
     AwAlertViewStyle3
 }AwAlertViewStyle;
 
+/** 弹出动画样式 ==> animationStyle */
 typedef enum {
-    AwAlertViewAniDefaul=0,
-    AwAlertViewAniStyle1,
-    AwAlertViewAniStyle2,
-    AwAlertViewAniStyle3
+    AwAlertViewAniNone=0,//无动画
+    AwAlertViewAniMin,//小幅度回弹
+    AwAlertViewAniMax,//大幅度回弹
+    AwAlertViewAniDown,//从上往下
+    AwAlertViewAniUp//从下往上
 }AwAlertViewAnimationStyle;
-
+/** 消失动画样式 ==> dismissAnimation */
 typedef enum {
-    AwDismissDefault=0,
-    AwDismissDown,
-    AwDismissOut
+    AwDismissNone=0,//无动画
+    AwDismissDown,//往小消失
+    AwDismissUp,//往上消失
+    AwDismissOut//放大消失
 }AwDismissAnimation;
 
 @class AwAlertView;

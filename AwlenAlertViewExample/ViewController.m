@@ -70,18 +70,18 @@
             webView.url=@"http://www.baidu.com";
             webView.title=@"百度链接";
             [self.navigationController pushViewController:webView animated:YES];
-            weakA.dismissAnimation=AwDismissDefault;
+            weakA.dismissAnimation=AwDismissNone;
             [weakA dismissAnimated:YES];
         };
         alertView.backgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"launch750"]];
-        alertView.animationStyle=AwAlertViewAniStyle3;
+        alertView.animationStyle=AwAlertViewAniNone;
         [alertView showAnimated:YES withPositionY:0];
     });
 }
 /** 使用不同Style创建 */
 - (IBAction)b1:(id)sender {
     AwAlertView *alertView=[[AwAlertView alloc]initWithStyle:AwAlertViewStyle1 title:@"title" message:@"message" delegate:self cancelTitle:@"cancel" otherTitle:@"other"];
-    alertView.animationStyle=AwAlertViewAniDefaul;
+    alertView.animationStyle=AwAlertViewAniNone;
     [alertView showAnimated:YES];
     [alertView.closeBtn setImage:[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close"] forState:UIControlStateNormal];
     [alertView.closeBtn setImage:[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close_hl"] forState:UIControlStateHighlighted];
@@ -90,7 +90,7 @@
 /** 使用不同Style创建 */
 - (IBAction)b2:(id)sender {
     AwAlertView *alertView=[[AwAlertView alloc]initWithStyle:AwAlertViewStyle2 title:@"title" message:@"message" delegate:self cancelTitle:@"cancel" otherTitle:@"other"];
-    alertView.animationStyle=AwAlertViewAniStyle1;
+    alertView.animationStyle=AwAlertViewAniMin;
     [alertView showAnimated:YES];
     [alertView.closeBtn setImage:[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close"] forState:UIControlStateNormal];
     [alertView.closeBtn setImage:[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close_hl"] forState:UIControlStateHighlighted];
@@ -99,7 +99,7 @@
 /** 使用不同Style创建 */
 - (IBAction)b3:(id)sender {
     AwAlertView *alertView=[[AwAlertView alloc]initWithStyle:AwAlertViewStyle3 title:@"title" message:@"message" delegate:self cancelTitle:@"cancel" otherTitle:@"other"];
-    alertView.animationStyle=AwAlertViewAniStyle2;
+    alertView.animationStyle=AwAlertViewAniMax;
     [alertView showAnimated:YES];
     [alertView.closeBtn setImage:[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close"] forState:UIControlStateNormal];
     [alertView.closeBtn setImage:[UIImage imageNamed:@"AwAlertViewlib.bundle/btn_navigation_close_hl"] forState:UIControlStateHighlighted];
