@@ -4,7 +4,7 @@
 //
 //  Created by yelin on 16/5/23.
 //  Copyright © 2016年 AlenW. All rights reserved.
-// 2016-08-16
+// 2016-09-06
 
 #import <UIKit/UIKit.h>
 
@@ -40,7 +40,13 @@ NS_ASSUME_NONNULL_END
 
 @class AwBgView;
 @interface AwTipView : UIView
-
+/**
+ *  类方法，显示message到指定View 的height－120的位置,默认显示1.5秒
+ *  可以使用posY字段去修改这个位置,showTime 去改变显示时间
+ *  @param message 将要显示到message
+ *  @param view    View
+ */
++(nullable AwTipView *)showToast:(nullable NSString *)message toView:(nullable UIView *)view;
 /**
  *  类方法，显示message到指定View,不会自动消失,必须调用 hideForView:Animated:方法
  *  可以运用在HTTP加载时，加载成功手动隐藏
@@ -86,6 +92,8 @@ NS_ASSUME_NONNULL_END
  @abstract      展示的时间，可设置
  */
 @property (nonatomic, assign) CGFloat showTime;
+/** 显示的位置 */
+@property (nonatomic, assign) CGFloat posY;
 
 /*!
  @property      dimBackground
