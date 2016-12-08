@@ -27,7 +27,8 @@
     [tipView showAnimated:YES];
 }
 - (IBAction)b2:(id)sender {
-    [AwTipView showSuccess:@"正在加载..." toView:nil];
+    AwTipView *tipView=[AwTipView showSuccess:@"正在加载..." toView:nil];
+    tipView.showTime=6;
 }
 - (IBAction)b3:(id)sender {
     [AwTipView showError:@"正在加载..." toView:nil];

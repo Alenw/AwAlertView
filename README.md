@@ -3,6 +3,12 @@ This AlertView can do more things which you need !
 <br/>
 https://github.com/Alenw/AwAlertView。
 <br/>
+<br>
+<hr>
+cocoaPods安装
+pod 'AlenwSpecs', '~> 1.0.6'
+<hr><br/>
+
 #####更多精彩内容，请查看demo！
 
 ###### SomeQusetions in Framework !

@@ -41,7 +41,6 @@
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
     self.layer.cornerRadius=5;
-    
 
 }
 -(void)setIsHiddenImageV:(BOOL)isHiddenImageV{

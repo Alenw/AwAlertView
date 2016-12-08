@@ -4,7 +4,7 @@
 //
 //  Created by yelin on 16/5/23.
 //  Copyright © 2016年 AlenW. All rights reserved.
-// 2016-09-06
+// 2016-11-17
 
 #import <UIKit/UIKit.h>
 
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param corner      绘制的圆角大小，一般是5;
  *  @param special     是否绘制带三角形指向
  */
- extern void addBackgroundTipColor(CGContextRef context, CGRect rect,int orientation,float offset,float margin,UIColor *color,float corner,BOOL special);
+extern void addBackgroundTipColor(CGContextRef context, CGRect rect,int orientation,float offset,float margin,UIColor *color,float corner,BOOL special);
 NS_ASSUME_NONNULL_END
 
 @class AwBgView;
@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_END
 /**
  *  类方法,显示带图片的AwTipView 会自动隐藏，显示时间随success文字长度而改变(1个字符0.2s)
  *  可以使用showtime字段修改显示时长
- *  @param success error 信息
+ *  @param error error 信息
  *  @param view    View
  */
 +(nullable AwTipView *)showError:(nullable NSString *)error toView:(nullable UIView *)view;
@@ -132,7 +132,7 @@ NS_ASSUME_NONNULL_END
 - (void)showAnimated:(BOOL)animated;
 
 /*!
- @param         animation 消失时是否使用动画
+ @param animated 消失时是否使用动画
  */
 - (void)hideAnimated:(BOOL)animated;
 /**
@@ -204,7 +204,7 @@ typedef enum {
  *  新增NSNotification awAlertViewDismiss 用于移除 AwAlertView,详见Demo b10
  */
 @interface AwAlertView : UIView
-@property (nonatomic, weak) id<AwAlertViewDelegate> delegate;
+@property (nonatomic, weak,nullable) id<AwAlertViewDelegate> delegate;
 
 @property (nonatomic, assign) AwAlertViewStyle awStyle;
 
@@ -305,49 +305,50 @@ typedef enum {
 /**
  *  指定即将展示的View在父视图中的Y值,view显示位置居中
  *
- *  @param positionY 距离顶部的Y
- *  @param flag      标记是否动画
+ *  @param posY          距离顶部的Y
+ *  @param animated      标记是否动画
  */
 -(void)showAnimated:(BOOL)animated withPositionY:(CGFloat)posY;
 /**
  *  指定即将展示的View的距离底部的偏移值,view显示位置居中,标记是否选择动画
  *
- *  @param offset 距离底部的偏移量
- *  @param flag   标记是否动画
+ *  @param offset       距离底部的偏移量
+ *  @param animated     标记是否动画
  */
 -(void)showAnimated:(BOOL)animated WithBottomYOffset:(CGFloat)offset;
 
 /**
  *  指定在某个位置展示
  *
- *  @param position origin,frame坐标系中左顶点坐标
+ *  @param point        origin,frame坐标系中左顶点坐标
+ *  @param animated     标记是否动画
  */
 -(void)showAnimated:(BOOL)animated inPoint:(CGPoint)point;
 
 /**
  *  指定在某个区域显示,Note:如果是自定义View，只支持约束和在layoutSubViews重写的布局，
  *  如果这个方面不是太懂的尽量不用这个方法
- *  @param rect 相对父视图坐标系的frame
+ *  @param rect         相对父视图坐标系的frame
  */
 -(void)showAnimated:(BOOL)animated inRect:(CGRect)rect;
 /**
  *  移除AwAlertView
- *  @param animated 是否加载动画
+ *  @param animated     是否加载动画
  */
 - (void)dismissAnimated:(BOOL)animated;
 
 /**
  *  延迟隐藏AwAlertView
  *
- *  @param animated 是否动画
- *  @param delay    延迟时间
+ *  @param animated     是否动画
+ *  @param delay        延迟时间
  */
 - (void)hideAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay;
 
 /***************************************************************************/
 /*!
- @property      dimBackground
- @abstract      是否显示背景渐变色,默认显示
+ *  @property           dimBackground
+ *  @abstract           是否显示背景渐变色,默认显示
  */
 @property (nonatomic, assign) BOOL hideDimBackground;
 /** 是否启用背景事件，默认不启用 */
@@ -360,8 +361,8 @@ typedef enum {
 /**
  *  动态更新自定义View的Y值
  *
- *  @param positionY 动态调整自定义View的Y值
- *  @param duration  持续时间,动画时间,键盘弹起的时间是0.25秒
+ *  @param positionY     动态调整自定义View的Y值
+ *  @param duration      持续时间,动画时间,键盘弹起的时间是0.25秒
  */
 - (void)awAlertViewAnimationWithPositionYValues:(CGFloat)positionY andDuration:(NSTimeInterval)duration;
 
